@@ -1,11 +1,13 @@
 import React from 'react';
+import UserApps from './UserApps'
 
 const UsersList = (props) => {
 
-  const users = Object.values(props.users).map((user, index) => {
+  const users = Object.keys(props.users).map((userKey, index) => {
     return(
       <article key={index} id="user">
-      <h4> {user.name} </h4>
+      <h4> {props.users[userKey].name} </h4>
+      <UserApps db={props.db} accountID={props.users[userKey].account}/>
       </article>
       )
   })

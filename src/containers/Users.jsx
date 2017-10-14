@@ -11,13 +11,6 @@ class Users extends Component{
     this.userData();
   }
 
-
-  accountData(account){
-    this.props.db.ref(`accounts/${account}`).on('value', (snapshot) => {
-      console.log(snapshot.val())
-    });
-  }
-
   userData(){
     this.props.db.ref('users/').once('value').then((snapshot) => {
       this.setState({users: snapshot.val()})
@@ -27,7 +20,7 @@ class Users extends Component{
   render(){
     return(
       <section id="users">
-      <UsersList users={this.state.users}/>
+      <UsersList db={this.props.db} users={this.state.users}/>
       </section>
       )
   }
