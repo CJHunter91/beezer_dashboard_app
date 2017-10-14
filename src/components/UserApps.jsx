@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Rating from 'react-star-rating-component';
 
 class UserApps extends Component {
 
@@ -20,7 +21,13 @@ class UserApps extends Component {
   formatApps(){
     const apps = Object.values(this.state.apps).map((app, index) => {
       return(
-        <li key={index}>{app.title}</li>
+        <li key={index}>{app.title}
+        <Rating
+        name="rate1" 
+        starCount={5}
+        value={1}
+        />
+        </li>
         )
     })
     return apps;
