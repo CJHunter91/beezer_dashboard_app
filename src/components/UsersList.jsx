@@ -2,11 +2,11 @@ import React from 'react';
 
 const UsersList = (props) => {
 
-  const users =
-  Object.values(props.users).map((user) => {
-    console.log(user)
+  const users = Object.values(props.users).map((user, index) => {
     return(
-      <li>{user.name}</li>
+      <article key={index} id="user">
+      <h4> {user.name} </h4>
+      </article>
       )
   })
 
