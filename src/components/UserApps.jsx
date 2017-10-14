@@ -17,10 +17,22 @@ class UserApps extends Component {
     });
   }
 
+  formatApps(){
+    const apps = Object.values(this.state.apps).map((app, index) => {
+      return(
+        <li key={index}>{app.title}</li>
+        )
+    })
+    return apps;
+  }
+
   render(){
     return(
       <section id="apps">
-      
+      <h4>Current Apps</h4>
+      <ul>
+      {this.formatApps()}
+      </ul>
       </section>
       )
   }
