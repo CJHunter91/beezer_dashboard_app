@@ -3,8 +3,22 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      users: []
+    }
+    this.userData();
+  }
+
+  userData(){
+    this.props.db.ref('users/').once('value').then((snapshot) => {
+      this.setState({users: snapshot.val()})
+    });
+  }
+
   render() {
-    console.log(this.props)
     return (
       <div className="App">
         <header className="App-header">

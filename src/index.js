@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import * as firebase from 'firebase';
+import firebase from 'firebase';
 
 var config = {
   apiKey: "AIzaSyCowc3qO-CUJwlL5Lo2R6Uk6kWFVcmrfHY",
@@ -18,9 +18,5 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-firebase.database().ref('accounts/').once('value').then(function(snapshot) {
-  console.log(snapshot.val())
-});
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App db={database} />, document.getElementById('root'));
 registerServiceWorker();
