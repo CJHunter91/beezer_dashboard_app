@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>Accounts Dashboard</h1>
+          <h1 id="title">Accounts Dashboard</h1>
         </header>
         <Users db={this.props.db}/>
       </div>

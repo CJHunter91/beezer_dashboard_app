@@ -33,7 +33,7 @@ class UserApps extends Component {
       return(
         <li key={index}>{this.state.apps[appKey].title}
         <Rating
-        id={1}
+        id="rating"
         name={appKey}
         onStarClick={this.onStarClick.bind(this)}
         starCount={5}
