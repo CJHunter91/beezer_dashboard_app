@@ -25,8 +25,7 @@ h1, h2, h3, h4, h5, p, li{
 #title{
   background: linear-gradient(to right, #7d9b89 29%, #939c53 100%);
   margin: 0px;
-  padding: 10px;
-  height: 5vh;
+  padding: 20px;
   font-size: 3.0vh;
 }
 
@@ -48,7 +47,7 @@ h1, h2, h3, h4, h5, p, li{
 }
 
 #users{
-  width: 80%;
+  width: 1024px;
   margin: 0 auto;
 }
 
