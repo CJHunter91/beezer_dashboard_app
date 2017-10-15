@@ -6,8 +6,7 @@ class UserApps extends Component {
   constructor(props){
     super(props);
     this.state = {
-      apps: [],
-      rating: 0
+      apps: []
     }
   }
 
@@ -26,7 +25,6 @@ class UserApps extends Component {
 
 
   onStarClick(nextValue, prevValue, name){
-      this.setState({rating: nextValue});
       this.setRating(name, nextValue)
   }
 
@@ -39,7 +37,7 @@ class UserApps extends Component {
         name={appKey}
         onStarClick={this.onStarClick.bind(this)}
         starCount={5}
-        value={0}
+        value={this.state.apps[appKey].rating}
         />
         </li>
         )
