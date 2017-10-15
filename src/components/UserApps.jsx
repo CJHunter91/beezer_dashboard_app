@@ -18,7 +18,6 @@ class UserApps extends Component {
 
   componentWillMount(){
     this.props.db.ref(`accounts/${this.props.accountID}`).on('value', (snapshot) => {
-      console.log(snapshot.val(), `accounts/${this.props.accountID}`, this.props)
       this.setState({apps: snapshot.val().apps})
     });
   }
