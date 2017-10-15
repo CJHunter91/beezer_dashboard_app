@@ -1,4 +1,4 @@
-User Account Dashboard
+# User Account Dashboard
 
 Author: Christopher Hunter
 
